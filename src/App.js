@@ -6,17 +6,22 @@ import About from './screens/About';
 
 function App() {
   // Styled Component Section
-  const Navbar = styled.ul`
-  background-color: aliceblue;
+  const Navbar = styled.div`
+  background-color: white;
+  color: #FFFDED;
   display: flex;
   position: relative;
   align-items: center;
-
+  height: 60px;
+  gap: 40px;
+  font-size: 1.2rem;
   `
-  const NavbarDiv = styled.div`
-  padding: 10px 5px;
+  const linkStyle = {
+    margin: "5px",
+    textDecoration: "none",
+    color: 'blue'
+  };
   
-  `
   // Variable Section
 
 
@@ -24,8 +29,8 @@ function App() {
   return (
     <>
       <Navbar>
-        <NavbarDiv><Link to="/">Home</Link></NavbarDiv>
-        <NavbarDiv><Link to="/about">About</Link></NavbarDiv>
+        <Link to="/" style={linkStyle}>Home</Link>
+        <Link to="/about" style={linkStyle}>About</Link>
       </Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
