@@ -13,8 +13,10 @@ function App() {
   flex-direction: column;
   align-items: center;
   `
-
+  
   // Variable Section
+
+
 
   return (
     <>
