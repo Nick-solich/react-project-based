@@ -5,6 +5,7 @@ import Home from './screens/Home';
 import About from './screens/About';
 
 function App() {
+  // Styled Component Section
   const Navbar = styled.div`
   background-color: aliceblue;
   margin: 0 auto;
@@ -12,6 +13,8 @@ function App() {
   flex-direction: column;
   align-items: center;
   `
+
+  // Variable Section
 
   return (
     <>
