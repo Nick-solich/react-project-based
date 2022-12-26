@@ -26,7 +26,7 @@ export default function Navbar() {
       <Link to="/about" style={linkStyle}>
         About
       </Link>
-      <Link to="/project1" style={linkStyle}>
+      <Link to="/projects" style={linkStyle}>
         Projects
       </Link>
     </Navbar>

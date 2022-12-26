@@ -3,7 +3,7 @@ import { Route , Routes } from 'react-router-dom'
 import Home from './screens/Home';
 import About from './screens/About';
 import Navbar from './components/Navbar';
-import Project1 from './screens/Project1';
+import Project1 from './screens/Projects';
 
 function App() {
   // Variable Section
@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/project1" element={<Project1 />} />
+        <Route path="/projects" element={<Project1 />} />
       </Routes>
     </>
   );
