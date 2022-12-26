@@ -27,7 +27,7 @@ export default function Navbar() {
         About
       </Link>
       <Link to="/project1" style={linkStyle}>
-        Project1
+        Projects
       </Link>
     </Navbar>
   );
