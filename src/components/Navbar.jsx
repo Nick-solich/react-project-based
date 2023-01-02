@@ -12,7 +12,6 @@ export default function Navbar() {
     justify-content: center;
     height: 60px;
     gap: 40px;
-    margin: 0;
   `;
   const linkStyle = {
     textDecoration: "none",
