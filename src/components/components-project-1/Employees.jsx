@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import styled from "styled-components";
+
 export default function Employees() {
   const [employees, setEmployees] = useState([
     {
@@ -87,18 +89,31 @@ export default function Employees() {
     },
   ]);
 
+  const EmployeeGridBox = styled.div`
+    /* outline: #313131 solid 1px; */
+    position: relative;
+    margin: 10px;
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+  `;
+  const Employee = styled.div`
+    outline: #4caf50 solid 1px;
+    height: 50px;
+  `;
   return (
     <>
       <div>Employees</div>
-      <div>
+      <EmployeeGridBox>
         {employees.map((employee) => (
           <>
-            <p>
+            <Employee>
               {employee.fullName} : {employee.gender}
-            </p>
+            </Employee>
           </>
         ))}
-      </div>
+      </EmployeeGridBox>
     </>
   );
 }
