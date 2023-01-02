@@ -1,13 +1,17 @@
 /* Default Style For This App */
-body {
-  margin: 0;
-  padding: 0;
+* {
+  box-sizing: border-box;
   font-family: 'Josefin Sans', sans-serif;
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif; */
   /* -webkit-font-smoothing: antialiased; */
   /* -moz-osx-font-smoothing: grayscale; */
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 h1 {
   margin: 0;
