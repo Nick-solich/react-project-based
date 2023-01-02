@@ -1,3 +1,4 @@
+/* Default Style For This App */
 body {
   margin: 0;
   padding: 0;
@@ -12,7 +13,9 @@ body {
   /* -webkit-font-smoothing: antialiased; */
   /* -moz-osx-font-smoothing: grayscale; */
 }
-
+h1 {
+  margin: 0;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
