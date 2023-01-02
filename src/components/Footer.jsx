@@ -12,7 +12,6 @@ export default function Footer() {
     padding: 1rem;
     align-items: center;
     justify-content: center;
-    box-sizing: border-box;
   `;
 
   return (
