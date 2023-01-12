@@ -104,7 +104,7 @@ export default function Employees() {
   `;
   return (
     <>
-      <div>Employees</div>
+      <h2>Employees</h2>
       <EmployeeGridBox>
         {employees.map((employee) => (
           <>
