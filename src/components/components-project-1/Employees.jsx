@@ -92,9 +92,9 @@ export default function Employees() {
   const EmployeeGridBox = styled.div`
     /* outline: #313131 solid 1px; */
     position: relative;
-    margin: 10px;
+    margin: 1rem 3rem;
     display: grid;
-    gap: 10px;
+    gap: 1rem;
     justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
   `;
