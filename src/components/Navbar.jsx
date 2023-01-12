@@ -13,7 +13,7 @@ export default function Navbar() {
     align-items: center;
     justify-content: center;
     height: 60px;
-    gap: 40px;
+    gap: 10%;
   `;
   const linkStyle = {
     textDecoration: "none",
