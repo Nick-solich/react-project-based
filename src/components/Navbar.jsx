@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { FaHome, FaChild, FaInbox } from "react-icons/fa";
+
 export default function Navbar() {
   // Styled Component Section
   const Navbar = styled.h1`
@@ -20,13 +22,13 @@ export default function Navbar() {
   return (
     <Navbar>
       <Link to="/" style={linkStyle}>
-        Home
+        <FaHome />
       </Link>
       <Link to="/about" style={linkStyle}>
-        About
+        <FaChild />
       </Link>
       <Link to="/projects" style={linkStyle}>
-        Projects
+        <FaInbox />
       </Link>
     </Navbar>
   );
