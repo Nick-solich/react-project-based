@@ -16,7 +16,7 @@ function App() {
   background-color: #E5E5CB;
   box-sizing: border-box;
   /* Applied From Navbar's height and Footer's height*/
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - 60px - 60px);
   `
   return (
     <>
