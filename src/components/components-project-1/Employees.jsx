@@ -101,6 +101,7 @@ export default function Employees() {
   const Employee = styled.div`
     outline: #4caf50 solid 1px;
     height: 50px;
+    padding: 5px;
   `;
   return (
     <>
