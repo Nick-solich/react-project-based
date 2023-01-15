@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Project1 from "./screens/Projects";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import { AppBody } from "./styles/AppStyle";
+import { AppBody } from "./styles/App.styles";
 
 function App() {
   const theme = {

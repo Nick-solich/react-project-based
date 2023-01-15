@@ -1,5 +1,5 @@
 import React from "react";
-import { NavbarBody } from "../styles/AppStyle";
+import { NavbarBody } from "../styles/App.styles";
 import { Link } from "react-router-dom";
 import { FaHome, FaChild, FaInbox } from "react-icons/fa";
 
