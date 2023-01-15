@@ -1,5 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import {
+  EmployeesGridBox,
+  EmployeeFlexBox,
+  FemaleIcon,
+  MaleIcon,
+  FlexContainer,
+} from "../../styles/Projects.styles";
 
 export default function Employees() {
   const [employees, setEmployees] = useState([
@@ -88,33 +95,20 @@ export default function Employees() {
       teamName: "TeamD",
     },
   ]);
-
-  const EmployeeGridBox = styled.div`
-    /* outline: #313131 solid 1px; */
-    position: relative;
-    margin: 1rem 3rem;
-    display: grid;
-    gap: 1rem;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
-  `;
-  const Employee = styled.div`
-    outline: #4caf50 solid 1px;
-    height: 50px;
-    padding: 5px;
-  `;
   return (
-    <>
+    <FlexContainer>
       <h2>Employees</h2>
-      <EmployeeGridBox>
+      <EmployeesGridBox>
         {employees.map((employee) => (
-          <>
-            <Employee>
-              {employee.fullName} : {employee.gender}
-            </Employee>
-          </>
+          <EmployeeFlexBox>
+            {employee.gender === "male" ? <MaleIcon /> : <FemaleIcon />}
+            <h4>Fullname : {employee.fullName}</h4>
+            <p>
+              <b>Designation</b> : {employee.designation}
+            </p>
+          </EmployeeFlexBox>
         ))}
-      </EmployeeGridBox>
-    </>
+      </EmployeesGridBox>
+    </FlexContainer>
   );
 }
