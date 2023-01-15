@@ -4,10 +4,16 @@ import About from "./screens/About";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Project1 from "./screens/Projects";
-import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+import { AppBody } from "./styles/AppStyle";
 
 function App() {
   const theme = {
+    light: {
+      primary: "#e5e5cb",
+      secondary: "#1a120b",
+      text: "#fffded",
+    },
     NavbarHeight: "60px",
     FooterHeight: "60px",
     fontFamily1: "Josefin Sans",
@@ -16,24 +22,15 @@ function App() {
   const GlobalStyles = createGlobalStyle`
     * {
       box-sizing: border-box;
-      font-family: ${(props) => props.theme.fontFamily1}, ${(props) =>
-    props.theme.fontFamily2};
       margin: 0;
       padding: 0;
+      font-family: ${(props) => props.theme.fontFamily1}, ${(props) =>
+    props.theme.fontFamily2};
     }
     code {
       font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
     }
     `;
-  const AppBody = styled.body`
-    position: relative;
-    background-color: #e5e5cb;
-    box-sizing: border-box;
-    min-height: calc(
-      100vh - ${(props) => props.theme.NavbarHeight} -
-        ${(props) => props.theme.FooterHeight}
-    );
-  `;
 
   return (
     <ThemeProvider theme={theme}>
