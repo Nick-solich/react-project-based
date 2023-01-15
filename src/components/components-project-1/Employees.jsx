@@ -7,6 +7,7 @@ import {
   MaleIcon,
   FlexContainer,
 } from "../../styles/Projects.styles";
+import { motion } from "framer-motion";
 
 export default function Employees() {
   const [selectedTeam, setTeam] = useState("TeamA");
@@ -122,19 +123,23 @@ export default function Employees() {
       </select>
       <EmployeesGridBox>
         {employees.map((employee) => (
-          <EmployeeFlexBox
-            id={employee.id}
-            variant={
-              employee.teamName === selectedTeam ? "selected" : "notSelected"
-            }
-            onClick={handleEmployeeCardClick}
+          <motion.div
+            whileHover={{ scale: 1.05, transition: { duration: 0.5 } }}
           >
-            {employee.gender === "male" ? <MaleIcon /> : <FemaleIcon />}
-            <h4>Fullname : {employee.fullName}</h4>
-            <p>
-              <b>Designation</b> : {employee.designation}
-            </p>
-          </EmployeeFlexBox>
+            <EmployeeFlexBox
+              id={employee.id}
+              variant={
+                employee.teamName === selectedTeam ? "selected" : "notSelected"
+              }
+              onClick={handleEmployeeCardClick}
+            >
+              {employee.gender === "male" ? <MaleIcon /> : <FemaleIcon />}
+              <h4>Fullname : {employee.fullName}</h4>
+              <p>
+                <b>Designation</b> : {employee.designation}
+              </p>
+            </EmployeeFlexBox>
+          </motion.div>
         ))}
       </EmployeesGridBox>
     </FlexContainer>

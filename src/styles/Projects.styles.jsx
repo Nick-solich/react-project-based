@@ -24,16 +24,12 @@ export const EmployeeFlexBox = styled(FlexContainer)`
   border-radius: 5pt;
   padding: 5px;
   align-items: center;
-  :hover {
-    transform: scale(1.1);
-    transition: 0.5s ease-out;
-  }
 `;
 export const MaleIcon = styled(FaMale)`
   color: #3f31da;
-  font-size: 5rem;
+  font-size: 4rem;
 `;
 export const FemaleIcon = styled(FaFemale)`
   color: #ea4bb5;
-  font-size: 5rem;
+  font-size: 4rem;
 `;
