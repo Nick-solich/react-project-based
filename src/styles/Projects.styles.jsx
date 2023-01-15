@@ -19,10 +19,15 @@ export const EmployeesGridBox = styled.div`
 `;
 export const EmployeeFlexBox = styled(FlexContainer)`
   cursor: pointer;
-  outline: ${(props) => props.theme.light.secondary} solid 1px;
+  outline: ${(props) => props.theme.light.secondary} solid
+    ${(props) => (props.variant === "selected" ? "2.5px" : "1px")};
   border-radius: 5pt;
   padding: 5px;
   align-items: center;
+  :hover {
+    transform: scale(1.1);
+    transition: 0.5s ease-out;
+  }
 `;
 export const MaleIcon = styled(FaMale)`
   color: #3f31da;

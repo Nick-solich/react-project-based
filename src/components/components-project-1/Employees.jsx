@@ -9,6 +9,7 @@ import {
 } from "../../styles/Projects.styles";
 
 export default function Employees() {
+  const [selectedTeam, setTeam] = useState("TeamA");
   const [employees, setEmployees] = useState([
     {
       id: 1,
@@ -95,12 +96,39 @@ export default function Employees() {
       teamName: "TeamD",
     },
   ]);
+
+  function handleTeamSelectionChange(e) {
+    console.log(e.target.value);
+    setTeam(e.target.value);
+  }
+  function handleEmployeeCardClick(e) {
+    const transformEmployees = employees.map((employee) =>
+      employee.id === parseInt(e.target.id)
+        ? employee.teamName === selectedTeam
+          ? { ...employee, teamName: null }
+          : { ...employee, teamName: selectedTeam }
+        : employee
+    );
+    setEmployees(transformEmployees);
+  }
   return (
     <FlexContainer>
       <h2>Employees</h2>
+      <select value={selectedTeam} onChange={handleTeamSelectionChange}>
+        <option value="TeamA">TeamA</option>
+        <option value="TeamB">TeamB</option>
+        <option value="TeamC">TeamC</option>
+        <option value="TeamD">TeamD</option>
+      </select>
       <EmployeesGridBox>
         {employees.map((employee) => (
-          <EmployeeFlexBox>
+          <EmployeeFlexBox
+            id={employee.id}
+            variant={
+              employee.teamName === selectedTeam ? "selected" : "notSelected"
+            }
+            onClick={handleEmployeeCardClick}
+          >
             {employee.gender === "male" ? <MaleIcon /> : <FemaleIcon />}
             <h4>Fullname : {employee.fullName}</h4>
             <p>
