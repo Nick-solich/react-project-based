@@ -12,7 +12,7 @@ export default function Navbar() {
     position: relative;
     align-items: center;
     justify-content: center;
-    height: 60px;
+    height: ${(props) => props.theme.NavbarHeight};
     gap: 10%;
   `;
   const linkStyle = {

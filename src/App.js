@@ -5,31 +5,46 @@ import About from './screens/About';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Project1 from './screens/Projects';
-import styled from 'styled-components';
+import styled, {createGlobalStyle , ThemeProvider} from 'styled-components';
 
 function App() {
-  // Variable Section
-  const Body = styled.body`
-  margin: 0;
-  padding: 0;
-  position: relative;
-  background-color: #E5E5CB;
-  box-sizing: border-box;
-  /* Applied From Navbar's height and Footer's height*/
-  min-height: calc(100vh - 60px - 60px);
-  `
+  const theme = {
+    NavbarHeight: '60px',
+    FooterHeight: '60px',
+    fontFamily1: 'Josefin Sans',
+    fontFamily2: 'sans-serif'
+  }
+  const GlobalStyles = createGlobalStyle`
+    * {
+      box-sizing: border-box;
+      font-family: ${(props => props.theme.fontFamily1)}, ${(props => props.theme.fontFamily2)};
+      margin: 0;
+      padding: 0;
+    }
+    code {
+      font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    }
+    `
+    const AppBody = styled.body`
+    position: relative;
+    background-color: #E5E5CB;
+    box-sizing: border-box;
+    min-height: calc(100vh - ${(props => props.theme.NavbarHeight)} - ${(props => props.theme.FooterHeight)});
+    `
+
   return (
-    <>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
       <Navbar />
-      <Body>
+      <AppBody>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Project1 />} />
         </Routes>
-      </Body>
+      </AppBody>
       <Footer />
-    </>
+    </ThemeProvider>
   );
 }
 

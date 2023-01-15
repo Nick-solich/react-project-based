@@ -6,7 +6,7 @@ export default function Footer() {
     background-color: #1a120b;
     color: #fffded;
     width: 100%;
-    height: 60px;
+    height: ${(props) => props.theme.NavbarHeight};
     font-size: 0.5rem;
     display: flex;
     padding: 1rem;
