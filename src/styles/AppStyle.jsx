@@ -18,12 +18,13 @@ const TemplateBody = styled.div`
   justify-content: center;
   position: relative;
 `;
+export const NavbarBody = styled(TemplateBody)`
+  height: ${(props) => props.theme.NavbarHeight};
+  gap: 10%;
+  font-size: 2rem;
+`;
 export const FooterBody = styled(TemplateBody)`
   height: ${(props) => props.theme.NavbarHeight};
   font-size: 0.5rem;
   padding: 1rem;
-`;
-export const NavbarBody = styled(TemplateBody)`
-  height: ${(props) => props.theme.NavbarHeight};
-  gap: 10%;
 `;
