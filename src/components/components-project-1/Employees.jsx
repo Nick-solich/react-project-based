@@ -6,6 +6,7 @@ import {
   FemaleIcon,
   MaleIcon,
   FlexContainer,
+  ProjectsSelect,
 } from "../../styles/Projects.styles";
 import { motion } from "framer-motion";
 
@@ -115,12 +116,12 @@ export default function Employees() {
   return (
     <FlexContainer>
       <h2>Employees</h2>
-      <select value={selectedTeam} onChange={handleTeamSelectionChange}>
+      <ProjectsSelect value={selectedTeam} onChange={handleTeamSelectionChange}>
         <option value="TeamA">TeamA</option>
         <option value="TeamB">TeamB</option>
         <option value="TeamC">TeamC</option>
         <option value="TeamD">TeamD</option>
-      </select>
+      </ProjectsSelect>
       <EmployeesGridBox>
         {employees.map((employee) => (
           <motion.div
