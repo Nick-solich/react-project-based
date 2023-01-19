@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import {
   EmployeesGridBox,
   EmployeeFlexBox,
   FemaleIcon,
   MaleIcon,
-  FlexContainer,
+  EmployeesFlexContainer,
   ProjectsSelect,
 } from "../../styles/Projects.styles";
 import { motion } from "framer-motion";
@@ -114,7 +113,7 @@ export default function Employees() {
     setEmployees(transformEmployees);
   }
   return (
-    <FlexContainer>
+    <EmployeesFlexContainer>
       <h2>Employees</h2>
       <ProjectsSelect value={selectedTeam} onChange={handleTeamSelectionChange}>
         <option value="TeamA">TeamA</option>
@@ -143,6 +142,6 @@ export default function Employees() {
           </motion.div>
         ))}
       </EmployeesGridBox>
-    </FlexContainer>
+    </EmployeesFlexContainer>
   );
 }
