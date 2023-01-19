@@ -32,6 +32,9 @@ function App() {
     h1 ,h2 ,h3 ,h4 ,h5 ,h6{
       line-height: 1.2;
     }
+    p {
+      line-height: 1.5;
+    }
     `;
 
   return (
