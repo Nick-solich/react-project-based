@@ -24,7 +24,6 @@ function App() {
       margin: 0;
       padding: 0;
       font-family: "YouTube Sans","Roboto",sans-serif;
-      /* font-family: "Josefin Sans", sans-serif; */
     }
     code {
       font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
