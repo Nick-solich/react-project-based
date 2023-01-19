@@ -3,7 +3,7 @@ import Home from "./screens/Home";
 import About from "./screens/About";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Project1 from "./screens/Projects";
+import Projects from "./screens/Projects";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { AppBody } from "./styles/App.styles";
 
@@ -40,7 +40,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Project1 />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>
       </AppBody>
       <Footer />
