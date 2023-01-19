@@ -16,8 +16,6 @@ function App() {
     },
     NavbarHeight: "60px",
     FooterHeight: "60px",
-    fontFamily1: "Josefin Sans",
-    fontFamily2: "sans-serif",
   };
   const GlobalStyles = createGlobalStyle`
     * {
@@ -25,11 +23,14 @@ function App() {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: ${(props) => props.theme.fontFamily1}, ${(props) =>
-    props.theme.fontFamily2};
+      font-family: "YouTube Sans","Roboto",sans-serif;
+      /* font-family: "Josefin Sans", sans-serif; */
     }
     code {
       font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    }
+    h1 ,h2 ,h3 ,h4 ,h5 ,h6{
+      line-height: 1.2;
     }
     `;
 
