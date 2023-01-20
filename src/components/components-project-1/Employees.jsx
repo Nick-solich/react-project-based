@@ -99,7 +99,7 @@ export default function Employees() {
   ]);
 
   function handleTeamSelectionChange(e) {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     setTeam(e.target.value);
   }
   function handleEmployeeCardClick(e) {
@@ -110,6 +110,7 @@ export default function Employees() {
           : { ...employee, teamName: selectedTeam }
         : employee
     );
+    console.log(e.target);
     setEmployees(transformEmployees);
   }
   return (
@@ -126,12 +127,15 @@ export default function Employees() {
           <motion.div
             whileHover={{ scale: 1.05, transition: { duration: 0.5 } }}
           >
-            <EmployeeFlexBox
+            <div
               id={employee.id}
+              onClick={handleEmployeeCardClick}
+              className="functionBox"
+            ></div>
+            <EmployeeFlexBox
               variant={
                 employee.teamName === selectedTeam ? "selected" : "notSelected"
               }
-              onClick={handleEmployeeCardClick}
             >
               {employee.gender === "male" ? <MaleIcon /> : <FemaleIcon />}
               <h4>Fullname : {employee.fullName}</h4>

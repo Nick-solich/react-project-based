@@ -17,6 +17,12 @@ export const EmployeesGridBox = styled.div`
   width: 90%;
   row-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(min(90%, 270px), 1fr));
+  .functionBox {
+    z-index: 1;
+    position: absolute;
+    width: 90%;
+    height: 100%;
+  }
 `;
 export const EmployeeFlexBox = styled(EmployeesGridBox)`
   cursor: pointer;
