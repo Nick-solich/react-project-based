@@ -99,7 +99,6 @@ export default function Employees() {
   ]);
 
   function handleTeamSelectionChange(e) {
-    // console.log(e.target.value);
     setTeam(e.target.value);
   }
   function handleEmployeeCardClick(e) {
@@ -110,7 +109,6 @@ export default function Employees() {
           : { ...employee, teamName: selectedTeam }
         : employee
     );
-    console.log(e.target);
     setEmployees(transformEmployees);
   }
   return (
