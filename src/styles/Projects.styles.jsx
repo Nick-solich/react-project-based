@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FaFemale, FaMale, FaCaretDown } from "react-icons/fa";
+import { FaFemale, FaMale } from "react-icons/fa";
 
 export const EmployeesFlexContainer = styled.div`
   display: flex;
