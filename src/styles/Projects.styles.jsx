@@ -26,6 +26,15 @@ export const EmployeeFlexBox = styled(EmployeesGridBox)`
   height: 100%;
   border-radius: 5pt;
   padding: 5px;
+  h4,
+  p {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
 `;
 export const MaleIcon = styled(FaMale)`
   justify-self: center;
