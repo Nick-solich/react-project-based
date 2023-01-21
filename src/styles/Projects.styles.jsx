@@ -6,7 +6,7 @@ export const EmployeesFlexContainer = styled.div`
   flex-direction: column;
   row-gap: 0.8rem;
   padding: 1rem;
-  h2 {
+  * {
     align-self: center;
   }
 `;
