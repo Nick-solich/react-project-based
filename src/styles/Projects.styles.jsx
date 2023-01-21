@@ -20,8 +20,17 @@ export const EmployeesGridBox = styled.div`
   .functionBox {
     z-index: 1;
     position: absolute;
-    width: 90%;
+    width: 100%;
     height: 100%;
+  }
+  h4,
+  p {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
   }
 `;
 export const EmployeeFlexBox = styled(EmployeesGridBox)`
@@ -32,15 +41,6 @@ export const EmployeeFlexBox = styled(EmployeesGridBox)`
   height: 100%;
   border-radius: 5pt;
   padding: 5px;
-  h4,
-  p {
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-  }
 `;
 export const MaleIcon = styled(FaMale)`
   justify-self: center;
@@ -54,15 +54,14 @@ export const FemaleIcon = styled(FaFemale)`
 `;
 
 export const ProjectsSelect = styled.select`
-  display: block;
-  width: 40%;
+  width: 20%;
+  line-height: 1.5;
   align-self: center;
   padding: 0.375rem 2.25rem 0.375rem 0.75rem;
   -moz-padding-start: calc(0.75rem - 3px);
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
+  color: ${(props) => props.theme.light.secondary};
   background-color: #fff;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;

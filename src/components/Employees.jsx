@@ -125,16 +125,16 @@ export default function Employees() {
           <motion.div
             whileHover={{ scale: 1.05, transition: { duration: 0.5 } }}
           >
-            <div
-              id={employee.id}
-              onClick={handleEmployeeCardClick}
-              className="functionBox"
-            ></div>
             <EmployeeFlexBox
               variant={
                 employee.teamName === selectedTeam ? "selected" : "notSelected"
               }
             >
+              <div
+                id={employee.id}
+                onClick={handleEmployeeCardClick}
+                className="functionBox"
+              ></div>
               {employee.gender === "male" ? <MaleIcon /> : <FemaleIcon />}
               <h4>Fullname : {employee.fullName}</h4>
               <p>
