@@ -6,7 +6,7 @@ import {
   MaleIcon,
   EmployeesFlexContainer,
   ProjectsSelect,
-} from "../../styles/Projects.styles";
+} from "../styles/Projects.styles";
 import { motion } from "framer-motion";
 
 export default function Employees() {

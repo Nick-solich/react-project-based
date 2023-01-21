@@ -1,5 +1,5 @@
 import React from "react";
-import Employees from "../components/components-project-1/Employees";
+import Employees from "../components/Employees";
 
 export default function Projects() {
   return <Employees />;
