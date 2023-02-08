@@ -114,6 +114,7 @@ export default function Employees() {
   return (
     <EmployeesFlexContainer>
       <h2>Employees</h2>
+      <h3>{selectedTeam} have any members</h3>
       <ProjectsSelect value={selectedTeam} onChange={handleTeamSelectionChange}>
         <option value="TeamA">TeamA</option>
         <option value="TeamB">TeamB</option>
